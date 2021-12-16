@@ -1,16 +1,15 @@
 #include <iostream>
 #include <iomanip>
-
 #include <time.h>
 #include <chrono>
 #include <fstream>
 using namespace std;
 
-int sortowanie_kubelkowe(long MAX,long MIN,long N)
+int sortowanie_kubelkowe(int  MAX,int  MIN,int  N)
 {
     auto startA = chrono::steady_clock::now();      //<-- zaczęcia liczenia czasu
 
-long long d[N],lw[MAX - MIN + 1],i,j;
+int  d[N],lw[MAX - MIN + 1],i,j;
 
 
 srand((unsigned)time(NULL));
@@ -55,12 +54,12 @@ cout<<"\n1 sortowanie - sortowanie kubelkowe"<<endl;
     return 0;
 }
 
-int sorto_wybor(long MAX,long MIN,long N)
+int sorto_wybor(int MAX,int MIN,int N)
 {
 
     auto startA = chrono::steady_clock::now();      //<-- zaczęcia liczenia czasu
 
-    long long d[N],i,j,pmin;
+    int d[N],i,j,pmin;
 cout<<endl<<endl<<endl<<endl;
 cout<<"Teraz 2 sortowanie - sortowanie przez wybieranie \n\n";
 // losowanie i wyswietlanie zawartosci
@@ -100,7 +99,7 @@ cout<<"Teraz 2 sortowanie - sortowanie przez wybieranie \n\n";
 int main()
 {
 
-  long long MIN,MAX,N;
+  int  MIN,MAX,N;
   cout<<"Podaj poczatek zakresu\n";cin>>MIN;
   cout<<"Podaj koniec zakrsu\n";cin>>MAX;
   cout<<"Podaj ilosc liczb do posortowania\n";cin>>N;
